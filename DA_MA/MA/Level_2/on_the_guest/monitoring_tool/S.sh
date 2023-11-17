@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo perf stat -e tsc,cs,major-faults,minor-faults,sched:sched_waking,sched:sched_wakeup,sched:sched_switch,sched:sched_migrate_task,sched:sched_stat_runtime,msr:write_msr,msr:read_msr,kmem:kmalloc_node,kmem:kmem_cache_alloc_node,kmem:kfree,kmem:kmem_cache_free,kmem:kmalloc,kmem:kmem_cache_alloc,kmem:kmalloc_node,kmem:kmem_cache_alloc_node,kmem:kfree,kmem:kmem_cache_free,kmem:mm_page_free,kmem:mm_page_free_batched,kmem:mm_page_alloc,kmem:mm_page_alloc_zone_locked,kmem:kmem_cache_alloc,kmem:kmalloc_node,kmem:kmem_cache_alloc_node,kmem:kfree,kmem:kmem_cache_free -a -I 1 -x, -o S_output.csv sleep 5
